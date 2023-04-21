@@ -54,11 +54,11 @@ def handle_collision(point_a, point_b):
 def main():
     screen_width = 800
     screen_height = 600
-    random_points = generate_random_points(50, screen_width, screen_height)
+    random_points = generate_random_points(100, screen_width, screen_height)
 
     pygame.init()
     display = pygame.display.set_mode((screen_width, screen_height))
-    pygame.display.set_caption("가위바위보 시뮬레이션")
+    pygame.display.set_caption("가위바위보 땅따먹기")
     clock = pygame.time.Clock()
 
     running = True
@@ -78,8 +78,8 @@ def main():
         for i in range(len(random_points)):
             point_a = random_points[i]
 
-            dx = random.randint(-10, 10)
-            dy = random.randint(-10, 10)
+            dx = random.randint(-15, 15)
+            dy = random.randint(-15, 15)
 
             point_a.x = (point_a.x + dx) % screen_width
             point_a.y = (point_a.y + dy) % screen_height
